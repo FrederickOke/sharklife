@@ -1,4 +1,5 @@
 #include <string>
+#include "Map.h"
 #include "locations.h"
 using namespace std;
 
@@ -19,10 +20,12 @@ private:
 
 };
 
-class SharkMap { //class to describe the sharks own map of discovered locations and recent events
-
+class SharkMap: public Map { //class to describe the sharks own map of discovered locations and recent events
+                 //subclass of MAP class, sister class of gameMap class
+                 //filled out at shark explores.
 public:
 
 private:
     //birthplace will be the root of the sharks own map.
+    
 };
