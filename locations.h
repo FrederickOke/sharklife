@@ -1,1 +1,1 @@
-//control the organization of different locations the shark can visit and what is within them
+//contains data on locations that the shark is in and is near, as well as the game map
