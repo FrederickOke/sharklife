@@ -9,6 +9,7 @@ class Map {
     // Desc: makes sure everything in child class is deallocated
     // Preconditions: none
     // Postconditions everything dynamically allocated is deallocated
+    virtual ~Map();
     private:
 
 };
