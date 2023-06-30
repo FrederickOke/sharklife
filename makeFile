@@ -1,0 +1,23 @@
+CXX = g++
+CXXFLAGS = -Wall -std=c++11
+INCLUDES = -I.
+SOURCES = 
+OBJECTS = $(SOURCES:.cpp=.o)
+EXECUTABLE = 
+
+
+farm: 
+	$(CXX) $(CXXFLAGS)  -o 
+
+
+clean:
+	rm -f *.o 
+
+run:
+	./
+
+test: 
+	$(CXX) $(CXXFLAGS)  -o test
+
+testrun:
+	./test
