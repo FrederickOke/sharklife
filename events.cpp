@@ -1,1 +1,0 @@
-//control what happens dynamically, outside of the sharks control upon entering the location
