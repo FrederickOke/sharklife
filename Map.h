@@ -2,50 +2,31 @@
 using namespace std;
 
 
-class Location { //the "Nodes" of the map class
-    public:
-    
-    //constructor
-    //destructor
-    
-    //vector of strings to hold places of interest
-    //vector of strings to hold information inside location
-    
-    //get and set description
-    string getDesc(); //return description of location
-    void setDesc(string); //set locations description
-    
-      
-
-    private:
-    string m_desc; //description of location
-
-    //4 cardinal locations of adjacent locations to this node
-    Location* m_north;
-    Location* m_south;
-    Location* m_east;
-    Location* m_west;
-};
-
-
 class Map {
     public:
     // Name: Map() - Default Constructor
-    // Description: Abstract class - cannot directly instantiate
-    // Preconditions: None
-    // Postconditions: Populates variables used in child classes (not specifically used)
+    // Description: Contains all map locations. locatinos are interconnected in game and also as a bst for searching purposes
+    // Preconditions: No map
+    // Postconditions:  map class exists to contain
     Map();
-    // Name: virtual ~Map - virtual destructor
-    // Desc: makes sure everything in child class is deallocated
+    // Name: ~Map - destructor
+    // Desc: makes sure everything in tree is deallocated through bst connections
     // Preconditions: none
     // Postconditions everything dynamically allocated is deallocated
     virtual ~Map();
 
-    //purely virtual functions defined in gamemap or sharkmap classes
-    virtual int getProgress(); //return map completion
+    int getProgress(); //return map completion as num
+
+    //insertion methods
+        //properly insert the node into the tree both according to its traversal connections and its bst connections
+    //finding methods
+    //rebalancing methods
 
 
     private:
+    int completion; //number of discovered locations out of total locations
+    int discoveredLocations; // number of discovered locations
+    int totallocations; //number of total locations in game
     Location* m_root;
     Location* m_currentLocation;
 };

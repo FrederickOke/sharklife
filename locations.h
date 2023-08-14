@@ -9,19 +9,46 @@
 class Location {
     public:
         Location (); //default constructor for a location
-        Location (string name, string desc); //overloaded constructor for location
+        Location (string name, string desc, bool discovered); //overloaded constructor for location
         ~Location(); //must delete all data pointers point to
         void populateAdjacent(); //populate m_adjacentLocations array
         void connectAdjacents(); //connect current location to its adjacent ones
-        void getDesc(); //give the player a description of location
+        
+        //get and set description of location
+        string getDesc(); //give the player a description of location
+        void setDesc(string); //set locations description
+
+        //get and set discovery state
+        bool getDiscovered();
+        void setDiscovered(bool newState);
+
+        //get and set name
+        string getName();
+        void setName(string name);
+
         void getChoices(); //give the player a description of the options available at that location after the description
         void addChoice(string choice); //add a choice to choices vector
 
+        //methods controlling the execution of events
+
     private:
-        string m_adjacentLocations {}; //array of names of the adjacent locations.
+        bool m_discovered = false;
+        string m_adjacentLocations {}; //array of names of the adjacent locations if necessary.
         string m_name; //name of current location
         string m_desc; //description of current location
         vector<string> choices{};
+
+        //traversal connections
+        Location* m_north;
+        Location* m_south;
+        Location* m_east;
+        Location* m_west;
+
+        //bst connections
+        Location* m_left; //left child
+        Location* m_right; //right child
+
+        //private member variables controlling the likelihood of event types. inheritance for specification of event types? event
 
 };
 
