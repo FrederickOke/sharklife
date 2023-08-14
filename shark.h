@@ -17,6 +17,7 @@ private:
     int m_age; //how long the shark has been alive. basically the "score". before reproducing
     int m_hungerLevel; //how much longer the shark can go without being forced into "starvation" state
     string m_state; //physical or psychological status of the shark
+    int m_experience; //general experience level of the shark being at a particular stage in life. Resets as the shark advances in age and must adapt to new situations unique to later stages in life.
 
 };
 
