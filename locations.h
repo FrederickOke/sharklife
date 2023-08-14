@@ -33,7 +33,7 @@ class Location {
 
     private:
         bool m_discovered = false;
-        string m_adjacentLocations {}; //array of names of the adjacent locations if necessary.
+        
         string m_name; //name of current location
         string m_desc; //description of current location
         vector<string> choices{};
@@ -49,15 +49,6 @@ class Location {
         Location* m_right; //right child
 
         //private member variables controlling the likelihood of event types. inheritance for specification of event types? event
-
-};
-
-//contains data on locations that the shark is in and is near, as well as the game map
-//the original map class. shark's map is essentially a copy that checks Island map to populate itself as the shark explores.
-//contains Location class pointers. 
-class Island: public Map {
-public:
-private:
 
 };
 

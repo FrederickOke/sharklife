@@ -7,9 +7,25 @@ using namespace std;
 class Shark { //class to describe the shark, it's possibilities and capabilities
 
 public:
+    Shark(); //default constructor for shark
+    ~Shark(); //destructor for anything dynamically allocated to shark
+
+    //get and set age
     int getAge();
+    void setAge(int age);
+
+    //get and set hunger
     int getHunger();
+    void setHunger(int hungerLevel);
+
+    //get and set state
     string getState();
+    void setState(string state);
+
+    //get and set experience lvl
+    int getExp();
+    void setExp(int exp);
+
     void changeLocation(); //shark traverses to another location
     void hunt(); //shark attempts to hunt for food
 

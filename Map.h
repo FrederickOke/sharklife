@@ -5,7 +5,7 @@ using namespace std;
 class Map {
     public:
     // Name: Map() - Default Constructor
-    // Description: Contains all map locations. locatinos are interconnected in game and also as a bst for searching purposes
+    // Description: Contains all map locations. locations are interconnected and may influence eachother when adjacent. bst connections for searching purposes 
     // Preconditions: No map
     // Postconditions:  map class exists to contain
     Map();
@@ -18,7 +18,10 @@ class Map {
     int getProgress(); //return map completion as num
 
     //insertion methods
-        //properly insert the node into the tree both according to its traversal connections and its bst connections
+    void insertLocation(Location* location); //properly insert the node into the tree both according to its traversal connections and its bst connections
+
+
+
     //finding methods
     //rebalancing methods
 
@@ -26,7 +29,7 @@ class Map {
     private:
     int completion; //number of discovered locations out of total locations
     int discoveredLocations; // number of discovered locations
-    int totallocations; //number of total locations in game
+    int totalLocations; //number of total locations in game
     Location* m_root;
     Location* m_currentLocation;
 };

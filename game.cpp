@@ -23,8 +23,8 @@ int main () {
     shallows.addChoice("Stalk the surface ");
     shallows.addChoice("Hide in the coral ");
     shallows.addChoice("Hide in the grasses ");
-    shallows.addChoice("Move on.");
-    //integrate location into the true map
+    shallows.addChoice("Move on?");
+    //integrate location into the true map (insertion)
     //birth the shark
     //give description of location
     //give list of options
