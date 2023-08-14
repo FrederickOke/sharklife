@@ -25,9 +25,9 @@ int main () {
     shallows.addChoice("Move on.");
     //integrate location into the true map
     //birth the shark
-    //give shark description of location
-    //give shark list of options
-    //allow shark to choose options
+    //give description of location
+    //give list of options
+    //allow player to choose options
 
     return 0;
 }
