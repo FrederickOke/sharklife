@@ -1,3 +1,4 @@
+#include "locations.h"
 #include <string>
 using namespace std;
 
