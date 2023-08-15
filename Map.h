@@ -19,6 +19,18 @@ class Map {
 
     //insertion methods
     void insertLocation(Location* location); //properly insert the node into the tree both according to its traversal connections and its bst connections
+    
+    //HELPER FUNCTIONS
+        //function name: recInsert
+        //function desc: recursively move through the bst aspect of the map nodes to find and insert target node
+        //precondition: node not inserted into tree
+        //postcondition: node inserted into bst aspect of tree, cardinal direction pointers not yet correctly associated to other nodes.
+    void recInsert(Location* curr, Location* toInsert); //recursive helper function.
+        //function name: asciiCompare
+        //function desc: compares current tree node and target node ascii values. if target is lower, returns 0, higher, returns 1. Equal returns -1 and will not be allowed in tree
+        //precondition: there is one node in the tree and one node to be inserted
+        //postcondition: none
+    int asciiCompare(Location* curr, Location* toInsert);//ascii comparison helper funciton
 
 
 
