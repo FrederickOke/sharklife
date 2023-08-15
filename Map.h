@@ -10,6 +10,7 @@ class Map {
     // Preconditions: No map
     // Postconditions:  map class exists to contain
     Map();
+
     // Name: ~Map - destructor
     // Desc: makes sure everything in tree is deallocated through bst connections
     // Preconditions: none
@@ -27,15 +28,13 @@ class Map {
         //precondition: node not inserted into tree
         //postcondition: node inserted into bst aspect of tree, cardinal direction pointers not yet correctly associated to other nodes.
     void recInsert(Location* curr, Location* toInsert); //recursive helper function.
-        //function name: asciiCompare
-        //function desc: compares current tree node and target node ascii values. if target is lower, returns 0, higher, returns 1. Equal returns -1 and will not be allowed in tree
+        //function name: isAsciiLower
+        //function desc: compares current tree node and target node ascii values. if target is lower, return true. else return false (higher). if equal, should not be allowed int the tree by other function 
         //precondition: there is one node in the tree and one node to be inserted
         //postcondition: none
-    int asciiCompare(Location* curr, Location* toInsert);//ascii comparison helper funciton
+    bool isAsciiLower(Location* curr, Location* toInsert);//ascii comparison helper function
 
-
-
-    //finding methods
+    //finding methods: no duplicates in the tree
     //rebalancing methods
 
 
