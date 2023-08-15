@@ -1,5 +1,15 @@
 #include "Map.h"
 
+void Map::insertLocation(Location* location){
+    //make sure node is not in the tree
+    if (findLocation(location->getName()) != nullptr){
+        cout << "Location already in tree. Insertion terminated." << endl;
+    }
+    else {
+        
+    }
+}
+
 
 //desc: returns nullptr if target not in the tree. else returns a pointer to that location
 Location* Map::findLocation(string targetName){

@@ -20,7 +20,8 @@ class Map {
     int getProgress(); //return map completion as num
 
     //insertion methods
-    void insertLocation(Location* location); //properly insert the node into the tree both according to its traversal connections and its bst connections
+    void insertLocation(Location* location); //properly insert the node into the tree bst wise
+    void connectToMap(Location* location); //helper to insertLocation, connects the node to its adjacent locations after every location has been inserted to the bst
     
     //HELPER FUNCTIONS
         //function name: recInsert
