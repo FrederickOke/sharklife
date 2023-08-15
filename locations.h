@@ -29,7 +29,24 @@ class Location {
         void getChoices(); //give the player a description of the options available at that location after the description
         void addChoice(string choice); //add a choice to choices vector
 
+        //methods for tree traversal
+        Location* getLeft();
+        void setLeft(Location* toLeft);
+        Location* setRight();
+        void setRight(Location* toRight);
+
+        //methods for map traversal
+        Location* getNorth();
+        void setNorth(Location* northLocation);
+        Location* getSouth();
+        void setSouth(Location* southLocation);
+        Location* getEast();
+        void setEast(Location* EastLocation);
+        Location* getWest();
+        void setWest(Location* WestLocation);
+
         //methods controlling the execution of events
+        
 
     private:
         bool m_discovered = false;

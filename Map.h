@@ -34,7 +34,8 @@ class Map {
         //postcondition: none
     bool isAsciiLower(Location* curr, Location* toInsert);//ascii comparison helper function
 
-    //finding methods: no duplicates in the tree
+    //finding methods: no duplicates allowed in the tree
+    Location * findLocation(string targetName); //check if a location by the same name is in the tree
     //rebalancing methods
 
 
