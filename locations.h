@@ -32,7 +32,7 @@ class Location {
         //methods for tree traversal
         Location* getLeft();
         void setLeft(Location* toLeft);
-        Location* setRight();
+        Location* getRight();
         void setRight(Location* toRight);
 
         //methods for map traversal
