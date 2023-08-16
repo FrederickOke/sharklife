@@ -6,6 +6,19 @@ Location::Location(){
     setDesc(DEFAULTDESC);
     setDiscovered(false); //new location undiscovered by default
     
+    //set all connections initially to nullptr
+    //traverse tree pointers
+    setLeft(nullptr);
+    setRight(nullptr);
+    
+    //traverse map pointers
+    setNorth(nullptr);
+    setSouth(nullptr);
+    setEast(nullptr);
+    setWest(nullptr);
+}
+Location::Location(string name, string desc, bool discovered){
+    
 }
 
 //get and set description
