@@ -1,16 +1,29 @@
 #include "Map.h"
 
-Location* Map::recInsert(Location* curr, Location* toInsert){
-
+Location* Map::getRoot(){
+    return m_root;
+}
+void Map::setRoot(Location* newRoot){
+    m_root = newRoot;
 }
 
 void Map::insertLocation(Location* location){
     
-    //make sure node is not in the tree
-    if (findLocation(location->getName()) != nullptr){
+    Location* parentPtr;
+
+    //if tree is empty
+    if (isEmpty()){
+        m_root = location;
+    }
+    
+    //else attempt to insert into tree 
+    parentPtr = recFindIns(location->getName(), getRoot(), INSERTMODE);
+
+    //if node already in tree
+    if (parentPtr == nullptr){
         cout << "Location already in tree. Insertion terminated." << endl;
     }
-    else { //location is not a duplicate and can be inserted into tree
+    else { //location is not a duplicate and can be inserted into tree. parentPtr points to what target node's parent should be
 
     }
 }

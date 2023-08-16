@@ -26,13 +26,6 @@ class Map {
     void insertLocation(Location* location); //properly insert the node into the tree bst wise
     void connectToMap(Location* location); //helper to insertLocation, connects the node to its adjacent locations after every location has been inserted to the bst
     
-    //HELPER FUNCTIONS
-        //function name: recInsert
-        //function desc: recursively move through the bst aspect of the map nodes to find and insert target node
-        //precondition: node not inserted into tree
-        //postcondition: node inserted into bst aspect of tree, cardinal direction pointers not yet correctly associated to other nodes.
-    void recInsert(Location* curr, Location* toInsert); //recursive helper function.
-
 
     //finding methods: no duplicates allowed in the tree
     Location * findLocation(string targetName); //check if a location by the same name is in the tree
@@ -47,12 +40,14 @@ class Map {
     
     //rebalancing methods
     bool isEmpty(); //whether the tree is empty
+    Location* getRoot();
+    void setRoot(Location* newRoot);
 
 
     private:
-    int completion; //number of discovered locations out of total locations
-    int discoveredLocations; // number of discovered locations
-    int totalLocations; //number of total locations in game
-    Location* m_root;
-    Location* m_currentLocation;
+        int completion; //number of discovered locations out of total locations
+        int discoveredLocations; // number of discovered locations
+        int totalLocations; //number of total locations in game
+        Location* m_root;
+        Location* m_currentLocation;
 };
