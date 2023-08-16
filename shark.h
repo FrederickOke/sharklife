@@ -26,7 +26,10 @@ public:
     int getExp();
     void setExp(int exp);
 
-    void changeLocation(); //shark traverses to another location
+    //get and set location
+    void setLocation(Location* location); //set the location of the shark
+    Location* getLocation(); //get current location of shark
+
     void hunt(); //shark attempts to hunt for food
 
 private:
@@ -37,14 +40,4 @@ private:
     
     //shark keeps track of its own general location
     Location* m_currentLocation;
-};
-
-class SharkMap: public Map { //class to describe the sharks own map of discovered locations and recent events
-                 //subclass of MAP class, sister class of gameMap class
-                 //filled out at shark explores.
-public:
-
-private:
-    //birthplace will be the root of the sharks own map.
-    
 };

@@ -11,7 +11,11 @@ class Sharklife {
 };
 
 int main () {
-    
+
+    //create the map
+    Map myMap;
+    Location* myLocation;
+
     //create locations. possibly recreate location each time shark enters and/or update choices based on sharks capabilities or state changes
     Location shallows(
         "Shallows", 
@@ -24,8 +28,14 @@ int main () {
     shallows.addChoice("Hide in the coral ");
     shallows.addChoice("Hide in the grasses ");
     shallows.addChoice("Move on?");
+
     //integrate location into the true map (insertion)
+    myLocation = &shallows;
+    myMap.insertLocation(myLocation);
+
     //birth the shark
+    Shark playerShark;
+    
     //give description of location
     //give list of options
     //allow player to choose options

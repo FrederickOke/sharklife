@@ -34,3 +34,8 @@ int Shark::getExp(){
 void Shark::setExp(int exp){
     m_experience = exp;
 }
+
+//get and set location
+void Shark::setLocation(Location* location){
+    m_currentLocation = location;
+}

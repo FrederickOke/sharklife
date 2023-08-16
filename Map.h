@@ -26,7 +26,6 @@ class Map {
     void insertLocation(Location* location); //properly insert the node into the tree bst wise
     void connectToMap(Location* location); //helper to insertLocation, connects the node to its adjacent locations after every location has been inserted to the bst
     
-
     //finding methods: no duplicates allowed in the tree
     Location * findLocation(string targetName); //check if a location by the same name is in the tree
     
