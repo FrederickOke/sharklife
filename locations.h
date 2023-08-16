@@ -6,6 +6,10 @@
 #include <vector>
 using namespace std;
 
+const string DEFAULTNAME = "DEFAULTNAME";
+const string DEFAULTDESC = "DEFAULT DESCRIPTION";
+
+
 
 //nodes of the location map "locations"
 //each location is predetermined, never changes. discovery, however is dynamic
@@ -29,7 +33,7 @@ class Location {
         string getName();
         void setName(string name);
 
-        void getChoices(); //give the player a description of the options available at that location after the description
+        void displayChoices(); //give the player a description of the options available at that location after the description
         void addChoice(string choice); //add a choice to choices vector
 
         //methods for tree traversal

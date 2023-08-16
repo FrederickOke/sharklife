@@ -17,7 +17,6 @@ void Shark::setHunger(int hungerLevel){
     m_hungerLevel = hungerLevel;
 }
 
-
 //get and set state
 string Shark::getState(){
     return m_state;
@@ -25,7 +24,6 @@ string Shark::getState(){
 void Shark::setState(string state){
     m_state = state;
 }
-
 
 //get and set experience lvl
 int Shark::getExp(){

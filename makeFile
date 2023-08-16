@@ -16,8 +16,8 @@ clean:
 run:
 	./
 
-test: locations.cpp shark.cpp Map.cpp test.cpp
-	$(CXX) $(CXXFLAGS) locations.cpp shark.cpp Map.cpp test.cpp -o test
+test: locations.cpp  Map.cpp shark.cpp test.cpp
+	$(CXX) $(CXXFLAGS) locations.cpp  Map.cpp shark.cpp test.cpp -o test
 
 testrun:
 	./test
