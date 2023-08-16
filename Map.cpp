@@ -17,14 +17,22 @@ void Map::insertLocation(Location* location){
     }
     
     //else attempt to insert into tree 
-    parentPtr = recFindIns(location->getName(), getRoot(), INSERTMODE);
+    else {
+        parentPtr = recFindIns(location->getName(), getRoot(), INSERTMODE);
 
-    //if node already in tree
-    if (parentPtr == nullptr){
-        cout << "Location already in tree. Insertion terminated." << endl;
-    }
-    else { //location is not a duplicate and can be inserted into tree. parentPtr points to what target node's parent should be
+        //if node already in tree
+        if (parentPtr == nullptr){
+            cout << "Location already in tree. Insertion terminated." << endl;
+        }
+        else { //location is not a duplicate and can be inserted into tree. parentPtr points to what target node's parent should be
+            //if target node ascii < parent
+            if (location->getName() < parentPtr->getName())
+                parentPtr->setLeft(location);
 
+            //else target node ascii is higher
+            else 
+                parentPtr->setRight(location);
+        }
     }
 }
 
