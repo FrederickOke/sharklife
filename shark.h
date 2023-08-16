@@ -1,3 +1,6 @@
+#ifndef SHARK_H
+#define SHARK_H
+
 #include <string>
 #include "Map.h"
 #include "locations.h"
@@ -41,3 +44,5 @@ private:
     //shark keeps track of its own general location
     Location* m_currentLocation;
 };
+
+#endif

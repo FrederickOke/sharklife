@@ -1,3 +1,6 @@
+#ifndef LOCATIONS_H
+#define LOCATIONS_H
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -74,3 +77,5 @@ class Location {
 
 //class to handle events in current and adjacent locations here
 class Event {}; //control what happens dynamically, outside of the sharks control upon entering the location
+
+#endif

@@ -1,3 +1,6 @@
+#ifndef MAP_H
+#define MAP_H
+
 #include "locations.h"
 #include <string>
 using namespace std;
@@ -50,3 +53,5 @@ class Map {
         Location* m_root;
         Location* m_currentLocation;
 };
+
+#endif
