@@ -35,8 +35,9 @@ int main () {
 
     //birth the shark
     Shark playerShark;
-    
+    playerShark.setLocation(myLocation);
     //give description of location
+    cout << playerShark.getLocation() << endl;
     //give list of options
     //allow player to choose options
 

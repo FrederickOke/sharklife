@@ -39,3 +39,6 @@ void Shark::setExp(int exp){
 void Shark::setLocation(Location* location){
     m_currentLocation = location;
 }
+Location* Shark::getLocation(){
+    return m_currentLocation;
+}

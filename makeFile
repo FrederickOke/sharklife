@@ -1,12 +1,12 @@
 CXX = g++
 CXXFLAGS = -Wall -std=c++11
 INCLUDES = -I.
-SOURCES = 
+SOURCES = locations.cpp shark.cpp Map.cpp
 OBJECTS = $(SOURCES:.cpp=.o)
 EXECUTABLE = 
 
 
-farm: 
+game: 
 	$(CXX) $(CXXFLAGS)  -o 
 
 
@@ -16,8 +16,8 @@ clean:
 run:
 	./
 
-test: 
-	$(CXX) $(CXXFLAGS)  -o test
+test: locations.cpp shark.cpp Map.cpp test.cpp
+	$(CXX) $(CXXFLAGS) locations.cpp shark.cpp Map.cpp test.cpp -o test
 
 testrun:
 	./test
