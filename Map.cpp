@@ -80,7 +80,7 @@ void Map::connectToMap(Location* location){
 //desc: returns nullptr if target not in the tree. else returns a pointer to that location
 Location* Map::findLocation(string targetName){
 
-    if (isEmpty){
+    if (isEmpty()){
         return nullptr;
     }
     else {

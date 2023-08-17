@@ -61,6 +61,7 @@ void Location::setName(string name){
 
 //add and display choices
 void Location::displayChoices(){
+    cout << "What will you do? " << endl;
     for (int i = 0; i < choices.size(); i++){
         cout << choices[i] << endl;
     }

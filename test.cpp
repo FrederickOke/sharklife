@@ -32,7 +32,10 @@ int main () {
     Shark playerShark;
     playerShark.setLocation(myLocation);
     //give description of location
+    cout << playerShark.getLocation()->getDesc() << endl;
+
     //give list of options
+    playerShark.getLocation()->displayChoices();
     //allow player to choose options
 
     return 0;
