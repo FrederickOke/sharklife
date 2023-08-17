@@ -36,6 +36,7 @@ public:
     void setLocation(Location* location); //set the location of the shark
     Location* getLocation(); //get current location of shark
 
+    //actions
     void hunt(); //shark attempts to hunt for food
 
 private:

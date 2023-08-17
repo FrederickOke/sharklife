@@ -49,3 +49,9 @@ void Shark::setLocation(Location* location){
 Location* Shark::getLocation(){
     return m_currentLocation;
 }
+
+//actions
+void Shark::hunt(){ 
+    //how shark attempts to hunt for food
+    //STUBBED
+}
