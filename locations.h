@@ -36,6 +36,7 @@ class Location {
 
         void displayChoices(); //give the player a description of the options available at that location after the description
         void addChoice(string choice); //add a choice to choices vector
+        void selectChoice(); //select appropriate event object depending on players choice
 
         //methods for tree traversal
         Location* getLeft();

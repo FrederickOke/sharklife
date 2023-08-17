@@ -63,7 +63,7 @@ void Location::setName(string name){
 void Location::displayChoices(){
     cout << "What will you do? " << endl;
     for (int i = 0; i < choices.size(); i++){
-        cout << choices[i] << endl;
+        cout << i+1 << ". " << choices[i] << endl;
     }
 }
 void Location::addChoice(string choice){
