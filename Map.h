@@ -26,10 +26,13 @@ class Map {
     //recursive helper function for tree deletion: delete left subtree recursively, the right subtree, then the current node
     void recDelete(Location* toDelete);
 
-    int getProgress(); //return map completion as num
-
+    //map completion methods
+    int getCompletion(); //return map completion as num
+    void setCompletion(int completion); //set completion level of map
+    void calcCompletion(); //helper to set completion that calculates current completion level of map.
     //insertion methods
     void insertLocation(Location* location); //properly insert the node into the tree bst wise
+    void deleteLocation(Location* toDelete); //delete a location but maintain it's subtree connections
     void connectToMap(Location* location); //helper to insertLocation, connects the node to its adjacent locations after every location has been inserted to the bst
     
     //finding methods: no duplicates allowed in the tree
@@ -47,14 +50,13 @@ class Map {
     bool isEmpty(); //whether the tree is empty
     Location* getRoot();
     void setRoot(Location* newRoot);
-
+    void rebalance(Location* aNode); //rebalance the tree
 
     private:
-        int completion; //number of discovered locations out of total locations
-        int discoveredLocations; // number of discovered locations
-        int totalLocations; //number of total locations in game
+        int m_completion; //number of discovered locations out of total locations
+        int m_discoveredLocations; // number of discovered locations
+        int m_totalLocations; //number of total locations in game
         Location* m_root;
-        Location* m_currentLocation;
 };
 
 #endif

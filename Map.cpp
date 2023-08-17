@@ -1,7 +1,9 @@
 #include "Map.h"
 
 //default constructor for map
-Map::Map(){}
+Map::Map(){
+    setRoot(nullptr);
+}
 //destructor for map class
 Map::~Map(){
     //recursively delete that which is in the tree
@@ -27,12 +29,18 @@ void Map::recDelete(Location* toDelete){
     delete toDelete;
 }
 
-Location* Map::getRoot(){
-    return m_root;
+//map completion methods
+int Map::getCompletion(){
+    return m_completion;
 }
-void Map::setRoot(Location* newRoot){
-    m_root = newRoot;
+void Map::setCompletion(int completion){
+    m_completion = completion;
 }
+void Map::calcCompletion(){
+    //STUBBED
+}
+
+
 
 void Map::insertLocation(Location* location){
     
@@ -62,6 +70,12 @@ void Map::insertLocation(Location* location){
         }
     }
 }
+void deleteLocation(Location* toDelete){ //delete a location but maintain it's subtree connections
+    //STUBBED
+}
+void Map::connectToMap(Location* location){
+    //STUBBED
+}
 
 //desc: returns nullptr if target not in the tree. else returns a pointer to that location
 Location* Map::findLocation(string targetName){
@@ -73,6 +87,7 @@ Location* Map::findLocation(string targetName){
         return recFindIns(targetName, m_root, FINDMODE); //RETURNS EITHER NULLPTR (if not in tree) or a pointer pointing to the node with the name in find mode
     }
 }
+
 
 Location* Map::recFindIns(string targetName, Location* curr, int mode){
     
@@ -127,4 +142,15 @@ bool Map::isEmpty(){
         return true;
     }
     return false;
+}
+
+//rebalancing methods
+Location* Map::getRoot(){
+    return m_root;
+}
+void Map::setRoot(Location* newRoot){
+    m_root = newRoot;
+} 
+void Map::rebalance(Location* aNode){
+    //STUBBED
 }

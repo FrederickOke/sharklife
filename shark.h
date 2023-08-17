@@ -6,6 +6,9 @@
 #include "locations.h"
 using namespace std;
 
+const int STARTINGLEVEL = 0;
+const string DEFAULTSTATE = "FINE";
+
 
 class Shark { //class to describe the shark, it's possibilities and capabilities
 

@@ -33,14 +33,8 @@ Location::Location(string name, string desc, bool discovered){
     setEast(nullptr);
     setWest(nullptr);
 }
-Location::~Location(){
-    //this node will be deleted, but we must call recursive deletion on the subtrees in a preorder fashion
-    //delete the left subtree recursively
-    //delete the right subtree recursively
-    //delete the current node
-
-}
-
+Location::~Location(){}//Map class handles recursive deletion of subtrees.
+    
 //get and set description
 string Location::getDesc(){
     return m_desc;

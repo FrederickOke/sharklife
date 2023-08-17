@@ -1,5 +1,14 @@
 #include "shark.h"
 
+
+//constructor and destructor for shark
+Shark::Shark(){
+    setAge(STARTINGLEVEL);
+    setHunger(STARTINGLEVEL);
+    setState(DEFAULTSTATE);
+}
+Shark::~Shark(){}
+
 //get and set age
 int Shark::getAge(){
     return m_age;

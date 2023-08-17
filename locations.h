@@ -17,7 +17,7 @@ class Location {
     public:
         Location (); //default constructor for a location
         Location (string name, string desc, bool discovered); //overloaded constructor for location
-        ~Location(); //must delete all data pointers point to
+        ~Location();
 
         void populateAdjacent(); //populate m_adjacentLocations array
         void connectAdjacents(); //connect current location to its adjacent ones
@@ -62,6 +62,9 @@ class Location {
         string m_name; //name of current location
         string m_desc; //description of current location
         vector<string> choices{};
+
+        //names of up to 4 adjacent locations
+        string adjacents[4]; 
 
         //traversal connections
         Location* m_north;
