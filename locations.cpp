@@ -5,7 +5,7 @@ Location::Location(){
     setName(DEFAULTNAME);
     setDesc(DEFAULTDESC);
     setDiscovered(false); //new location undiscovered by default
-    
+
     //set all connections initially to nullptr
     //traverse tree pointers
     setLeft(nullptr);
@@ -18,7 +18,27 @@ Location::Location(){
     setWest(nullptr);
 }
 Location::Location(string name, string desc, bool discovered){
+    setName(name);
+    setDesc(desc);
+    setDiscovered(discovered); 
+
+    //set all connections initially to nullptr
+    //traverse tree pointers
+    setLeft(nullptr);
+    setRight(nullptr);
     
+    //traverse map pointers
+    setNorth(nullptr);
+    setSouth(nullptr);
+    setEast(nullptr);
+    setWest(nullptr);
+}
+Location::~Location(){
+    //this node will be deleted, but we must call recursive deletion on the subtrees in a preorder fashion
+    //delete the left subtree recursively
+    //delete the right subtree recursively
+    //delete the current node
+
 }
 
 //get and set description

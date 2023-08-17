@@ -18,6 +18,7 @@ class Location {
         Location (); //default constructor for a location
         Location (string name, string desc, bool discovered); //overloaded constructor for location
         ~Location(); //must delete all data pointers point to
+
         void populateAdjacent(); //populate m_adjacentLocations array
         void connectAdjacents(); //connect current location to its adjacent ones
         

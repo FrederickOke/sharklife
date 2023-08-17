@@ -20,8 +20,11 @@ class Map {
     // Name: ~Map - destructor
     // Desc: makes sure everything in tree is deallocated through bst connections
     // Preconditions: none
-    // Postconditions everything dynamically allocated is deallocated
-    virtual ~Map();
+    // Postconditions: everything in the tree is recursively deleted
+    ~Map();
+
+    //recursive helper function for tree deletion: delete left subtree recursively, the right subtree, then the current node
+    void recDelete(Location* toDelete);
 
     int getProgress(); //return map completion as num
 

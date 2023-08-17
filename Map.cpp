@@ -1,5 +1,32 @@
 #include "Map.h"
 
+//default constructor for map
+Map::Map(){}
+//destructor for map class
+Map::~Map(){
+    //recursively delete that which is in the tree
+    if (getRoot() != nullptr){ //if tree is not empty
+        recDelete(m_root);
+    }
+}
+
+//recursive helper function for destruction of map class
+void Map::recDelete(Location* toDelete){
+    //RECURSIVE CASE
+    //delete left subtree
+    if (toDelete->getLeft() != nullptr){
+        recDelete(toDelete->getLeft());
+    }
+    //RECURSIVE CASE
+    //delete right subtree
+    if (toDelete->getRight() != nullptr){
+        recDelete(toDelete->getRight());
+    }
+    //BASE CASE
+    //delete current location node.
+    delete toDelete;
+}
+
 Location* Map::getRoot(){
     return m_root;
 }
