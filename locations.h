@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "events.h"
 using namespace std;
 
 const string DEFAULTNAME = "DEFAULTNAME";
@@ -11,13 +12,28 @@ const string DEFAULTDESC = "DEFAULT DESCRIPTION";
 
 
 
+class Choice {
+    public:
+        Choice(string choiceDesc, string successDesc, string failDesc, float successRatio);
+        ~Choice();
+
+        float calcThreshhold(); //takes input of choice and returns float determining what happened
+
+        
+    private:
+        string successDesc;
+        string failDesc;
+        float successRatio;
+
+};
+
 //nodes of the location map "locations"
 //each location is predetermined, never changes. discovery, however is dynamic
 class Location {
     public:
         Location (); //default constructor for a location
         Location (string name, string desc, bool discovered); //overloaded constructor for location
-        ~Location();
+        ~Location(); //deallocate all dynamiccaly allocated choices memory
 
         void populateAdjacent(); //populate m_adjacentLocations array
         void connectAdjacents(); //connect current location to its adjacent ones
@@ -35,7 +51,7 @@ class Location {
         void setName(string name);
 
         void displayChoices(); //give the player a description of the options available at that location after the description
-        void addChoice(string choice); //add a choice to choices vector
+        void addChoice(string choiceDesc, string successDesc, string failDesc, float successRatio); //add a choice to choices vector
         void selectChoice(); //select appropriate event object depending on players choice
 
         //methods for tree traversal
@@ -62,7 +78,7 @@ class Location {
         
         string m_name; //name of current location
         string m_desc; //description of current location
-        vector<string> choices{};
+        vector<Choice *> choices{}; //vector of choice pointers describing choices
 
         //names of up to 4 adjacent locations
         string adjacents[4]; 
@@ -81,10 +97,5 @@ class Location {
 
 };
 
-
-
-
-//class to handle events in current and adjacent locations here
-class Event {}; //control what happens dynamically, outside of the sharks control upon entering the location
 
 #endif

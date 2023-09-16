@@ -66,8 +66,10 @@ void Location::displayChoices(){
         cout << i+1 << ". " << choices[i] << endl;
     }
 }
-void Location::addChoice(string choice){
-    choices.push_back(choice);
+void Location::addChoice(string choiceDesc, string successDesc, string failDesc, float successRatio){
+    
+    Choice myChoice(choiceDesc, successDesc, failDesc, successRatio);
+    choices.push_back(&myChoice);
 }
 
 //methods for tree traversal

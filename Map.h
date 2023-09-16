@@ -9,6 +9,7 @@ using namespace std;
 const int FINDMODE = 0;
 const int INSERTMODE = 1;
 
+//game map class. contains locations and handles connections between them, both as a binary avl tree and as a net of nodes.
 class Map {
     public:
     // Name: Map() - Default Constructor

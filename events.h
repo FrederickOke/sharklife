@@ -7,7 +7,19 @@
 
 class Event {
     public:
-        friend class shark;
+
+        Event ();
+        Event (string desc, int skillLevel, float riskChance, float rewardChance);
+        ~Event();
+
+        
+        //an event may modify or call functions to modify any of these
+        friend class Shark;
+        friend class Location;
+        friend class Map;
+
+        
+
     private:
 
 };
